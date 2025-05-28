@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate Issuance DApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎓 Certificate DApp</h1>
+  
+  <button onclick="connectWallet()">Connect Wallet</button>
+  <p id="walletAddress">Wallet: Not connected</p>
+
+  <hr>
+
+  <h2>Issue Certificate (Admin)</h2>
+  <input type="text" id="recipient" placeholder="Recipient Address" />
+  <input type="text" id="name" placeholder="Student Name" />
+  <input type="text" id="course" placeholder="Course Name" />
+  <button onclick="issueCertificate()">Issue Certificate</button>
+  <p id="issueStatus"></p>
+
+  <hr>
+
+  <h2>Verify Certificate</h2>
+  <input type="text" id="verifyAddress" placeholder="User Address" />
+  <input type="number" id="certIndex" placeholder="Certificate Index" />
+  <button onclick="verifyCertificate()">Verify</button>
+  <p id="verifyResult"></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="contractABI.js"></script>
+  <script src="verifierABI.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
